@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "Python Script\\Station 1"
+		},
+		{
+			"path": "Python Script\\Station 2"
+		},
+		{
+			"path": "Python Script\\Station 3"
+		},
+		{
+			"path": "Python Script\\Station 4"
+		}
+	],
+	"settings": {
+		"diffEditor.maxFileSize": 0
+	}
+}

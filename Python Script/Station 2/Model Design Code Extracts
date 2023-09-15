@@ -1,0 +1,34 @@
+# Extracting relevent variables for the model
+    #weather variables
+Avg_Temp = weather[['Date', 'Avg Temp']]
+rainfall = weather[['Date', 'Rainfall (mm)']]
+
+    #Client cash balances
+cash1 = c1x[['Date', 'Cash Balance']]
+cash2 = c2x[['Row Labels', 'Cash Balance']]
+cash3 = c3x[['Date', 'Cash Balance']]
+cash4 = c4x[['Date', 'Cash Balance']]
+cash5 = c5x[['Date', 'Cash Balance']]
+
+    # Commodities
+corn = corn_price_history_df[['Date', 'Last', 'Open Interest']]
+wheat = wheat_price_history_df[['Date', 'Last', 'Open Interest']]
+
+#Retrieving all dataframes from Featire Engineering station
+%store -r corn_price_history_df
+%store -r wheat_price_history_df
+%store -r weather
+%store -r c1
+%store -r c1x
+%store -r c2
+%store -r c2x
+%store -r c3
+%store -r c3x
+%store -r c4
+%store -r c4x
+%store -r c5
+%store -r c5x
+
+#Use Date column as index
+Avg_Temp.index = Avg_Temp.pop('Date')
+Avg_Temp.head()
